@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Login from './components/login/login';
+import Chat from './components/chat/chat';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams, 
+  
+} from "react-router-dom";
+import { Col, Container, Row } from 'react-bootstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  render() {
+    return (
+    <Router>
+      <div className="App">
+        <Container>
+          <Row>
+            <Col></Col>
+            <Col xs={7}>
+              <div className="App-content">
+                <Route path="/" exact component={Login} />
+                <Route path="/chat" component={Chat} />
+              </div>
+            </Col>
+            <Col></Col>
+          </Row>
+          
+        </Container>
+        {/* <header className="App-header">
+        </header> */}
+        
+      </div>
+    </Router>
+    );
+  }
 }
-
-export default App;

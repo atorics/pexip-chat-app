@@ -19,15 +19,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.App-content{
+  background-color: #282c34;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
 .App-link {
   color: #61dafb;
 }
 
+.participants-names {
+  text-align: start;
+}
+hr.participants-name {
+  color: white;
+  border-color: white;
+  margin: 10px 0px 10px 0px;
+}
+
+div.ex3 {
+  /* background-color: lightblue; */
+  height: 310px;
+  overflow: auto;
+  text-align: start;
+  padding-left: 10px;
+}
+
+.currentParticipant {
+  font-weight: bold;
+  color: red;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
